@@ -35,7 +35,7 @@ Total function coverage was 95%:</p>
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/d07b27274c416ae258ec3d1003a9b26a51fed749?diff=unified&w=1)
 
 Screenshot of the coverage results:
-<img src="https://i.ibb.co/DCRzTGC/image.png" maxwidth="800"></p>
+<img src="https://i.ibb.co/DCRzTGC/image.png" maxwidth="600"></p>
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 
@@ -44,7 +44,7 @@ Screenshot of the coverage results:
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/d07b27274c416ae258ec3d1003a9b26a51fed749?diff=unified&w=1)
 
 Screenshot of the coverage results:
-<img src="https://i.ibb.co/HGK6X27/image.png" maxwidth="800"></p>
+<img src="https://i.ibb.co/HGK6X27/image.png" maxwidth="600"></p>
 
 ## Coverage improvement
 
