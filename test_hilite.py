@@ -23,6 +23,11 @@ class OrderedTestSuite(unittest.TestSuite):
 
 class TestCodeHilite(unittest.TestCase):        
 
+    @unittest.skip(" ")
+    def test_empty_coverage(self):
+        print("-"*10 + "parse_hl_lines Coverage" + "-"*10)
+        print_coverage(branch_coverage_cd)
+
     #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')

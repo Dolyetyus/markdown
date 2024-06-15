@@ -4,6 +4,11 @@ from markdown.coverage_tracker import branch_coverage_hl
 
 class TestParseHlLines(unittest.TestCase):
 
+    @unittest.skip(" ")
+    def test_empty_coverage(self):
+        print("-"*10 + "parse_hl_lines Coverage" + "-"*10)
+        print_coverage(branch_coverage_hl)
+
     #@unittest.skip("Tests added are skipped to show")
     def test_empty_string(self):
         """Test that an empty string returns an empty list."""
