@@ -30,7 +30,7 @@ Total function coverage was 95%:</p>
 
 **Said Musab Oguz**
 
-- Function name: parse_hl_lines
+#### Function Name: parse_hl_lines
 
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/d07b27274c416ae258ec3d1003a9b26a51fed749?diff=unified&w=1)
 
@@ -39,7 +39,7 @@ Screenshot of the coverage results:</p>
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 
-- Function name: hilite
+#### Function Name: codehilite
 
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/d07b27274c416ae258ec3d1003a9b26a51fed749?diff=unified&w=1)
 
@@ -58,7 +58,7 @@ Screenshot of the coverage results:</p>
 
 - Function name:
 
-[Link to the patch (diff)]()
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
 
 Screenshot of the coverage results:</p>
 
@@ -66,7 +66,7 @@ Screenshot of the coverage results:</p>
 
 - Function name: 
 
-[Link to the patch (diff)]()
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
 
 Screenshot of the coverage results:</p>
 
@@ -74,7 +74,7 @@ Screenshot of the coverage results:</p>
 
 - Function name:
 
-[Link to the patch (diff)]()
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
 
 Screenshot of the coverage results:</p>
 
@@ -82,7 +82,7 @@ Screenshot of the coverage results:</p>
 
 - Function name: 
 
-[Link to the patch (diff)]()
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
 
 Screenshot of the coverage results:</p>
 
@@ -90,7 +90,7 @@ Screenshot of the coverage results:</p>
 
 - Function name:
 
-[Link to the patch (diff)]()
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
 
 Screenshot of the coverage results:</p>
 
@@ -107,7 +107,7 @@ Screenshot of the coverage results:</p>
 [Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/f8a67f6aab90ee436302e72e8ccdba6cd3e79ba1?diff=unified&w=1)
 
 **Old coverage result:** </p>
-<img src="https://i.ibb.co/HGK6X27/image.png" width="600"></p>
+<img src="https://i.ibb.co/DCRzTGC/image.png" width="600"></p>
 
 **New coverage result:** </p>
 <img src="https://i.ibb.co/VS6pwKr/image.png" width="600"></p>
@@ -124,7 +124,7 @@ The new tests check the function in 3 cases:
 [Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/f8a67f6aab90ee436302e72e8ccdba6cd3e79ba1?diff=unified&w=1)
 
 **Old coverage result:** </p>
-<img src="https://i.ibb.co/DCRzTGC/image.png" width="600"></p>
+<img src="https://i.ibb.co/HGK6X27/image.png" width="600"></p>
 
 **New coverage result:** </p>
 <img src="https://github.com/Dolyetyus/markdown/assets/67073431/a8b3c9aa-b8b1-4f12-a3c8-f591d1aaafe2" width="600"></p>
@@ -192,10 +192,12 @@ The new tests check the function in 9 cases:
 
 ### Overall
 
-<Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
+**Results of the old coverage results by running the existing tool (coverage.py):** </p>
+<img src="https://i.ibb.co/y6VkxkY/image.png" width="600"></p>
 
-<Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
+**Results of the new coverage results by running the existing tool using all test modifications made by the group:** </p>
+*We will run the tool again after all of us are done and we merge our tests*
 
 ## Statement of individual contributions
 
-<Write what each group member did>
+*Write here what each group member did*
