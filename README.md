@@ -50,7 +50,7 @@ Screenshot of the coverage results:</p>
 
 - Function name: 
 
-[Link to the patch (diff)]()
+<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
 
 Screenshot of the coverage results:</p>
 
