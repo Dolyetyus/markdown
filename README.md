@@ -28,17 +28,23 @@ Total function coverage was 95%:</p>
 
 <The following is supposed to be repeated for each group member>
 
-<Group member name>
+**Said Musab Oguz**
 
-<Function 1 name>
+- parse_hl_lines
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+[Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/d07b27274c416ae258ec3d1003a9b26a51fed749?diff=unified&w=1)
+
+Screenshot of changes:
+<img src="https://i.ibb.co/Fsw5c1t/image.png" maxwidth="1200"></p>
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 
-<Function 2 name>
+- hilite
 
-<Provide the same kind of information provided for Function 1>
+[Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/d07b27274c416ae258ec3d1003a9b26a51fed749?diff=unified&w=1)
+
+Screenshot of changes:
+<img src="https://i.ibb.co/8j39QhZ/image.png" maxwidth="1200"></p>
 
 ## Coverage improvement
 
