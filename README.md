@@ -30,7 +30,7 @@ Total function coverage was 95%:</p>
 
 **Said Musab Oguz**
 
-- parse_hl_lines
+- Function name: parse_hl_lines
 
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/d07b27274c416ae258ec3d1003a9b26a51fed749?diff=unified&w=1)
 
@@ -39,7 +39,7 @@ Screenshot of changes:
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 
-- hilite
+- Function name: hilite
 
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/d07b27274c416ae258ec3d1003a9b26a51fed749?diff=unified&w=1)
 
