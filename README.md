@@ -16,9 +16,13 @@ Programming language: Python 3
 
 ### Existing tool
 
-<Inform the name of the existing tool that was executed and how it was executed>
+The coverage check is done with [coverage.py](https://github.com/nedbat/coveragepy). The following command is used to check the total coverage throughtout the project:
+```
+$ coverage run -m unittest discover
+```
 
-<Show the coverage results provided by the existing tool with a screenshot>
+Total function coverage was 95%:</p>
+<img src="https://i.ibb.co/y6VkxkY/image.png" width="1000"></p>
 
 ### Your own coverage tool
 
