@@ -46,6 +46,54 @@ Screenshot of the coverage results:</p>
 Screenshot of the coverage results:</p>
 <img src="https://i.ibb.co/HGK6X27/image.png" width="600"></p>
 
+**Mihnea Bârsan**
+
+- Function name: 
+
+[Link to the patch (diff)]()
+
+Screenshot of the coverage results:</p>
+
+<Provide a screenshot of the coverage results output by the instrumentation>
+
+- Function name:
+
+[Link to the patch (diff)]()
+
+Screenshot of the coverage results:</p>
+
+**Robert Sofroni**
+
+- Function name: 
+
+[Link to the patch (diff)]()
+
+Screenshot of the coverage results:</p>
+
+<Provide a screenshot of the coverage results output by the instrumentation>
+
+- Function name:
+
+[Link to the patch (diff)]()
+
+Screenshot of the coverage results:</p>
+
+**Alexandru Florea**
+
+- Function name: 
+
+[Link to the patch (diff)]()
+
+Screenshot of the coverage results:</p>
+
+<Provide a screenshot of the coverage results output by the instrumentation>
+
+- Function name:
+
+[Link to the patch (diff)]()
+
+Screenshot of the coverage results:</p>
+
 ## Coverage improvement
 
 ### Individual tests
