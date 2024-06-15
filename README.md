@@ -8,7 +8,7 @@ URL: https://github.com/Python-Markdown/markdown
 
 Number of lines of code and the tool used to count it: Total number of lines of code: 17295.
 Tested by using Lizard to count the nloc.
-<img src="https://i.ibb.co/Pr4ZjNc/Whats-App-Image-2024-06-07-at-01-41-00-31a65e5a.jpg" width="400"></p>
+<img src="https://i.ibb.co/Pr4ZjNc/Whats-App-Image-2024-06-07-at-01-41-00-31a65e5a.jpg" width="600"></p>
 
 Programming language: Python 3
 
