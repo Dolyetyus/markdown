@@ -3,9 +3,6 @@ from markdown.extensions.codehilite import parse_hl_lines
 from markdown.coverage_tracker import branch_coverage_hl
 
 class TestParseHlLines(unittest.TestCase):
-    def coverage_before_tests(self):
-        print("-"*3 + "parse_hl_lines Coverage Without Included Tests" + "-"*3)
-        print_coverage(branch_coverage_hl)
 
     #@unittest.skip("Tests added are skipped to show")
     def test_empty_string(self):
@@ -50,5 +47,8 @@ def print_coverage(branch_list):
 
 
 if __name__ == '__main__':
+    print("-"*3 + "parse_hl_lines Coverage Without Included Tests" + "-"*3)
+    print_coverage(branch_coverage_hl)
+    
     unittest.main()
 

@@ -21,12 +21,9 @@ class OrderedTestSuite(unittest.TestSuite):
         for method in test_methods:
             self.addTest(method())
 
-class TestCodeHilite(unittest.TestCase):
+class TestCodeHilite(unittest.TestCase):        
 
-    def coverage_before_tests_hl(self):
-        print("-"*3 + "hilite Coverage Without Included Tests" + "-"*3)
-        print_coverage(branch_coverage_cd)
-
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test_hilite_with_language(self, mock_highlight, mock_get_lexer):
@@ -47,6 +44,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-"*10 + "hilite Test 1" + "-"*10)
         print_coverage(branch_coverage_cd)
 
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.guess_lexer')
     @patch('markdown.extensions.codehilite.highlight')
@@ -67,6 +65,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 2" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test_hilite_no_pygments_with_line_numbers(self, mock_highlight, mock_get_lexer):
@@ -83,6 +82,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 3" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test_hilite_with_invalid_formatter(self, mock_highlight, mock_get_lexer):
@@ -100,6 +100,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 4" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test_hilite_with_linenos(self, mock_highlight, mock_get_lexer):
@@ -118,6 +119,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 5" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
+    #@unittest.skip("Tests added are skipped to show")
     def test_hilite_without_shebang(self):
         """Test hilite without shebang parsing."""
         code = CodeHilite('print("Hello, World!")', lang=None)
@@ -130,6 +132,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-"*10 + "hilite Test 6" + "-"*10)
         print_coverage(branch_coverage_cd)
 
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test_hilite_with_custom_formatter(self, mock_highlight, mock_get_lexer):
@@ -150,6 +153,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 7" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test_hilite_with_double_fallback(self, mock_highlight, mock_get_lexer):
@@ -167,6 +171,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 8" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test_hilite_no_pygments_with_classes(self, mock_highlight, mock_get_lexer):
@@ -186,6 +191,9 @@ class TestCodeHilite(unittest.TestCase):
         print_coverage(branch_coverage_cd)
 
 if __name__ == '__main__':
+    print("-"*3 + "hilite Coverage Without Included Tests" + "-"*3)
+    print_coverage(branch_coverage_cd)
+
     suite = OrderedTestSuite()
     runner = unittest.TextTestRunner()
     runner.run
