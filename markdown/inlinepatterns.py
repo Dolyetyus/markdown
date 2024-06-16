@@ -45,6 +45,7 @@ from typing import TYPE_CHECKING, Any, Collection, NamedTuple
 import re
 import xml.etree.ElementTree as etree
 from html import entities
+from .coverage_tracker import branch_coverage_dequote
 
 if TYPE_CHECKING:  # pragma: no cover
     from markdown import Markdown
@@ -172,8 +173,10 @@ def dequote(string: str) -> str:
     """Remove quotes from around a string."""
     if ((string.startswith('"') and string.endswith('"')) or
        (string.startswith("'") and string.endswith("'"))):
+        branch_coverage_dequote["dequote_32"] = True
         return string[1:-1]
     else:
+        branch_coverage_dequote["dequote_33"] = True
         return string
 
 

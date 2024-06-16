@@ -30,6 +30,7 @@ import unicodedata
 from copy import deepcopy
 import xml.etree.ElementTree as etree
 from typing import TYPE_CHECKING, Any, Iterator, MutableSet
+from ..coverage_tracker import branch_coverage_get_name
 
 if TYPE_CHECKING:  # pragma: no cover
     from markdown import Markdown
@@ -72,8 +73,11 @@ def get_name(el: etree.Element) -> str:
     text = []
     for c in el.itertext():
         if isinstance(c, AtomicString):
+            print("AtomicString found!")
+            branch_coverage_get_name["get_name_30"] = True
             text.append(html.unescape(c))
         else:
+            branch_coverage_get_name["get_name_31"] = True
             text.append(c)
     return ''.join(text).strip()
 
