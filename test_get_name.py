@@ -12,7 +12,7 @@ class TestGetName(unittest.TestCase):
         el.text = AtomicString("Important Title")
         result = get_name(el)
         self.assertEqual(result, "Important Title")
-        self.assertTrue(branch_coverage_get_name["get_name_31"])
+        self.assertTrue(branch_coverage_get_name["get_name_30"])
         print_coverage(branch_coverage_get_name)
 
     def test_get_name_with_text(self):
