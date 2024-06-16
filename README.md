@@ -16,7 +16,7 @@ Programming language: Python 3
 
 ### Existing tool
 
-The coverage check is done with [coverage.py](https://github.com/nedbat/coveragepy). The following command is used to check the total coverage throughtout the project:
+The coverage check is done with [coverage.py](https://github.com/nedbat/coveragepy). The following command is used to check the total coverage throughout the project:
 ```
 $ coverage run -m unittest discover
 ```
