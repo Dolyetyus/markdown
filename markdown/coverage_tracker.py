@@ -1,11 +1,14 @@
 # coverage_tracker.py
 
-branch_coverage_get_name ={
-    "get_name_30": False,
-    "get_name_31": False,
+branch_coverage_dequote={
+    "dequote_30": False,
+    "dequote_31": False,
 }
 
-branch_coverage_dequote={
-    "dequote_32": False,
-    "dequote_33": False,
+branch_coverage_parse_header ={
+    "parse_header_32": False,
+    "parse_header_33": False,
+    "parse_header_34": False,
+    "parse_header_35": False,
+    "parse_header_36": False,
 }

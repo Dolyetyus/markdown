@@ -2,25 +2,29 @@ import unittest
 from markdown.inlinepatterns import dequote
 from markdown.coverage_tracker import branch_coverage_dequote
 
+
+class AtomicString(str):
+    pass
+
 class TestGetName(unittest.TestCase):
     def test_dequote_with_double_quotes(self):
         result = dequote('"Hello"')
         self.assertEqual(result, 'Hello')
-        self.assertTrue(branch_coverage_dequote["dequote_32"])
+        self.assertTrue(branch_coverage_dequote["dequote_30"])
         print_coverage(branch_coverage_dequote)
 
 
     def test_dequote_with_single_quotes(self):
         result = dequote("'World'")
         self.assertEqual(result, 'World')
-        self.assertTrue(branch_coverage_dequote["dequote_32"])
+        self.assertTrue(branch_coverage_dequote["dequote_30"])
         print_coverage(branch_coverage_dequote)
 
 
     def test_dequote_with_no_quotes(self):
         result = dequote('Hello World')
         self.assertEqual(result, 'Hello World')
-        self.assertTrue(branch_coverage_dequote["dequote_33"])
+        self.assertTrue(branch_coverage_dequote["dequote_31"])
         print_coverage(branch_coverage_dequote)
 
 
