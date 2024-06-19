@@ -25,6 +25,7 @@ from . import Extension
 from ..treeprocessors import Treeprocessor
 from ..util import parseBoolValue
 from typing import TYPE_CHECKING, Callable, Any
+from ..coverage_tracker import branch_coverage_HT
 
 if TYPE_CHECKING:  # pragma: no cover
     import xml.etree.ElementTree as etree
@@ -268,10 +269,13 @@ class HiliteTreeprocessor(Treeprocessor):
         """ Find code blocks and store in `htmlStash`. """
         blocks = root.iter('pre')
         for block in blocks:
+            branch_coverage_HT["run_1"] = True
             if len(block) == 1 and block[0].tag == 'code':
+                branch_coverage_HT["run_2"] = True
                 local_config = self.config.copy()
                 text = block[0].text
                 if text is None:
+                    branch_coverage_HT["run_3"] = True
                     continue
                 code = CodeHilite(
                     self.code_unescape(text),
