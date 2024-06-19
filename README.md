@@ -22,7 +22,7 @@ $ coverage run -m unittest discover
 ```
 
 Total function coverage was 95%:</p>
-<img src="https://i.ibb.co/y6VkxkY/image.png" width="600"></p>
+<img src="https://github.com/Dolyetyus/markdown/assets/67073431/04c8b4e1-f721-4cb9-96c4-d017a22dfc02" width="600"></p>
 
 ### Your own coverage tool
 
