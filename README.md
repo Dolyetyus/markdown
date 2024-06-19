@@ -193,7 +193,7 @@ The new tests check the function in 9 cases:
 ### Overall
 
 **Results of the old coverage results by running the existing tool (coverage.py):** </p>
-<img src="https://i.ibb.co/y6VkxkY/image.png" width="600"></p>
+<img src="https://github.com/Dolyetyus/markdown/assets/67073431/d40bb79d-5aa0-4910-9840-a81a2ccd36f7" width="600"></p>
 
 **Results of the new coverage results by running the existing tool using all test modifications made by the group:** </p>
 *We will run the tool again after all of us are done and we merge our tests*
