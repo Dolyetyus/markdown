@@ -11,7 +11,7 @@ def print_coverage(branch_coverage: dict) -> None:
     coverage_percentage = (hit_count / total_branches) * 100 if total_branches > 0 else 0
     
     for branch, hit in branch_coverage.items():
-        print(f"{branch} was {'hit' if hit else 'not hit'}")
+        print(f"\"{branch}\" flag: {'on' if hit else 'off'}")
     
     print("Total function coverage: {:.2f}%".format(coverage_percentage))
 
