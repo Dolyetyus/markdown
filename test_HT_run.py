@@ -2,7 +2,6 @@ import unittest
 import xml.etree.ElementTree as etree
 from markdown.extensions.codehilite import HiliteTreeprocessor as HT
 from markdown.core import Markdown
-#from markdown.util import Processor
 from markdown.coverage_tracker import branch_coverage_HT
 
 
@@ -22,13 +21,10 @@ def clear_coverage(branch_coverage: dict) -> None:
 
 
 class TestHTRun(unittest.TestCase):
-
-    #def init_HT_test_obj() -> HT:
+    
     test_md = Markdown()
-    #test_processor = Processor(test_md)
     test_HT_obj = HT(test_md)
     test_HT_obj.config = dict()
-    #test_HT_obj = init_HT_test_obj
     
     def test_empty_coverage(self):
         print("-" * 10 + "HT.run Coverage")
@@ -43,7 +39,6 @@ class TestHTRun(unittest.TestCase):
         clear_coverage(branch_coverage_HT)
 
     def test_first_second_flags(self):
-     #  print("self.HT_obj.config: " + str(self.HT_obj.config))
         print("-" * 5 + "first + second flags on")
         root = etree.fromstring("""<pre><code>print("Hello World")</code></pre>""")
         self.test_HT_obj.run(root)
@@ -51,7 +46,6 @@ class TestHTRun(unittest.TestCase):
         clear_coverage(branch_coverage_HT)
     
     def test_first_second_third_flags(self):
-     #  print("self.HT_obj.config: " + str(self.HT_obj.config))
         print("-" * 5 + "first + second + third flags on")
         root = etree.fromstring("""<pre><code></code></pre>""")
         self.test_HT_obj.run(root)
