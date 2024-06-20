@@ -30,6 +30,7 @@ import unicodedata
 from copy import deepcopy
 import xml.etree.ElementTree as etree
 from typing import TYPE_CHECKING, Any, Iterator, MutableSet
+from ..coverage_tracker import branch_coverage_html_sub
 
 if TYPE_CHECKING:  # pragma: no cover
     from markdown import Markdown
@@ -84,15 +85,17 @@ def stashedHTML2text(text: str, md: Markdown, strip_entities: bool = True) -> st
     def _html_sub(m: re.Match[str]) -> str:
         """ Substitute raw html with plain text. """
         try:
+            branch_coverage_html_sub["html_sub_1"] = True
             raw = md.htmlStash.rawHtmlBlocks[int(m.group(1))]
         except (IndexError, TypeError):  # pragma: no cover
             return m.group(0)
         # Strip out tags and/or entities - leaving text
         res = re.sub(r'(<[^>]+>)', '', raw)
         if strip_entities:
+            branch_coverage_html_sub["html_sub_2"] = True
             res = re.sub(r'(&[\#a-zA-Z0-9]+;)', '', res)
         return res
-
+    
     return HTML_PLACEHOLDER_RE.sub(_html_sub, text)
 
 
