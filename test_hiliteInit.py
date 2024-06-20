@@ -5,8 +5,9 @@ from markdown.coverage_tracker import branch_coverage_hiliteInit
 
 class testInit(unittest.TestCase):
     
-    @unittest.skip("Tests added are skipped to show")
-    def test_d_no_options(self): 
+    #@unittest.skip("Tests added are skipped to show")
+    def test_d_no_options(self):
+        print("-----------------Test 4-------------------------") 
         code = CodeHilite(src="print('Hello, World!')")
         assert code.src == "print('Hello, World!')"
         self.assertTrue(branch_coverage_hiliteInit["codehilite_init_40"])
@@ -14,8 +15,9 @@ class testInit(unittest.TestCase):
         self.assertTrue(branch_coverage_hiliteInit["codehilite_init_42"])
         print_coverage(branch_coverage_hiliteInit)
         
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     def test_a_no_linenos(self):
+        print("-----------------Test 1-------------------------") 
         code = CodeHilite(src="print('Hello, World!')", cssclass='class', wrapcode=False)
         assert code.src == "print('Hello, World!')"
         self.assertTrue(branch_coverage_hiliteInit["codehilite_init_40"])
@@ -24,8 +26,9 @@ class testInit(unittest.TestCase):
         assert code.options['wrapcode'] == False
         print_coverage(branch_coverage_hiliteInit)
         
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     def test_b_no_css(self):
+        print("-----------------Test 2-------------------------") 
         code = CodeHilite(src="print('Hello, World!')", linenos='inline', wrapcode=False)
         assert code.src == "print('Hello, World!')"
         self.assertTrue(branch_coverage_hiliteInit["codehilite_init_41"])
@@ -34,8 +37,9 @@ class testInit(unittest.TestCase):
         assert code.options['wrapcode'] == False
         print_coverage(branch_coverage_hiliteInit)
 
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     def test_c_no_wrap(self):
+        print("-----------------Test 3-------------------------") 
         code = CodeHilite(src="print('Hello, World!')", linenos='inline', cssclass='class')
         assert code.src == "print('Hello, World!')"
         self.assertTrue(branch_coverage_hiliteInit["codehilite_init_42"])
@@ -44,8 +48,10 @@ class testInit(unittest.TestCase):
         assert code.options['cssclass'] == 'class'
         print_coverage(branch_coverage_hiliteInit)
         
-    def test_no_coverage(self):
-        print("-"*10 + "codehilite Init Coverage" + "-"*10)
+    @unittest.skip("Tests added are skipped to show")
+    def test_A_no_coverage(self):
+        print("-----------------Test 0(no_coverage)-------------------------") 
+        #print("-"*10 + "codehilite Init Coverage" + "-"*10)
         print_coverage(branch_coverage_hiliteInit)
  
         
@@ -61,5 +67,4 @@ def print_coverage(branch_list):
 
 
 if __name__ == '__main__':
-    #print_coverage(branch_coverage_hiliteInit)
     unittest.main()   
