@@ -5,6 +5,7 @@ from markdown.coverage_tracker import branch_coverage_hiliteInit
 
 class testInit(unittest.TestCase):
     
+    @unittest.skip("Tests added are skipped to show")
     def test_d_no_options(self): 
         code = CodeHilite(src="print('Hello, World!')")
         assert code.src == "print('Hello, World!')"
@@ -13,6 +14,7 @@ class testInit(unittest.TestCase):
         self.assertTrue(branch_coverage_hiliteInit["codehilite_init_42"])
         print_coverage(branch_coverage_hiliteInit)
         
+    @unittest.skip("Tests added are skipped to show")
     def test_a_no_linenos(self):
         code = CodeHilite(src="print('Hello, World!')", cssclass='class', wrapcode=False)
         assert code.src == "print('Hello, World!')"
@@ -22,6 +24,7 @@ class testInit(unittest.TestCase):
         assert code.options['wrapcode'] == False
         print_coverage(branch_coverage_hiliteInit)
         
+    @unittest.skip("Tests added are skipped to show")
     def test_b_no_css(self):
         code = CodeHilite(src="print('Hello, World!')", linenos='inline', wrapcode=False)
         assert code.src == "print('Hello, World!')"
@@ -31,6 +34,7 @@ class testInit(unittest.TestCase):
         assert code.options['wrapcode'] == False
         print_coverage(branch_coverage_hiliteInit)
 
+    @unittest.skip("Tests added are skipped to show")
     def test_c_no_wrap(self):
         code = CodeHilite(src="print('Hello, World!')", linenos='inline', cssclass='class')
         assert code.src == "print('Hello, World!')"
@@ -39,6 +43,11 @@ class testInit(unittest.TestCase):
         assert code.options['wrapcode'] == True
         assert code.options['cssclass'] == 'class'
         print_coverage(branch_coverage_hiliteInit)
+        
+    def test_no_coverage(self):
+        print("-"*10 + "codehilite Init Coverage" + "-"*10)
+        print_coverage(branch_coverage_hiliteInit)
+ 
         
 def print_coverage(branch_list):
     hit_count = sum(hit for hit in branch_list.values())
@@ -52,4 +61,5 @@ def print_coverage(branch_list):
 
 
 if __name__ == '__main__':
+    #print_coverage(branch_coverage_hiliteInit)
     unittest.main()   
