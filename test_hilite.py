@@ -4,25 +4,7 @@ from unittest.mock import patch, MagicMock
 from markdown.coverage_tracker import branch_coverage_cd
 from test_parse_hl_lines import print_coverage
 
-class OrderedTestSuite(unittest.TestSuite):
-    def __init__(self):
-        super().__init__()
-        test_methods = [
-            TestCodeHilite.test_hilite_with_language,
-            TestCodeHilite.test_hilite_guess_language,
-            TestCodeHilite.test_hilite_no_pygments_with_line_numbers,
-            TestCodeHilite.test_hilite_with_invalid_formatter,
-            TestCodeHilite.test_hilite_with_linenos,
-            TestCodeHilite.test_hilite_without_shebang,
-            TestCodeHilite.test_hilite_with_custom_formatter,
-            TestCodeHilite.test_hilite_with_double_fallback,
-            TestCodeHilite.test_hilite_no_pygments_with_classes
-        ]
-        for method in test_methods:
-            self.addTest(method())
-
 class TestCodeHilite(unittest.TestCase):        
-
     @unittest.skip(" ")
     def test_empty_coverage(self):
         print("-"*10 + "hilite Coverage" + "-"*10)
@@ -31,7 +13,7 @@ class TestCodeHilite(unittest.TestCase):
     #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
-    def test_hilite1_with_language(self, mock_highlight, mock_get_lexer):
+    def test0_hilite_with_language(self, mock_highlight, mock_get_lexer):
         """Test hilite with specified language."""
         code = CodeHilite('print("Hello, World!")', lang='python')
 
@@ -53,7 +35,7 @@ class TestCodeHilite(unittest.TestCase):
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.guess_lexer')
     @patch('markdown.extensions.codehilite.highlight')
-    def test_hilite2_guess_language(self, mock_highlight, mock_guess_lexer, mock_get_lexer):
+    def test1_hilite_guess_language(self, mock_highlight, mock_guess_lexer, mock_get_lexer):
         """Test hilite with language guessing."""
         code = CodeHilite('print("Hello, World!")', lang=None, guess_lang=True)
 
@@ -64,6 +46,9 @@ class TestCodeHilite(unittest.TestCase):
         result = code.hilite()
 
         self.assertIn('highlighted_code', result)
+        self.assertTrue(branch_coverage_cd["hilite_13"])
+        self.assertTrue(branch_coverage_cd["hilite_16"])
+        self.assertTrue(branch_coverage_cd["hilite_17"])
         self.assertTrue(branch_coverage_cd["hilite_18"])
         self.assertTrue(branch_coverage_cd["hilite_21"])
 
@@ -73,7 +58,7 @@ class TestCodeHilite(unittest.TestCase):
     #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
-    def test_hilite3_no_pygments_with_line_numbers(self, mock_highlight, mock_get_lexer):
+    def test2_hilite_no_pygments_with_line_numbers(self, mock_highlight, mock_get_lexer):
         """Test hilite without pygments (JavaScript fallback) with line numbers."""
         code = CodeHilite('print("Hello, World!")', use_pygments=False, linenos=True)
 
@@ -82,7 +67,8 @@ class TestCodeHilite(unittest.TestCase):
         self.assertIn('<pre class="codehilite"><code class="linenums">', result)
         self.assertIn('print(&quot;Hello, World!&quot;)', result)
         self.assertTrue(branch_coverage_cd["hilite_26"])
-        self.assertTrue(branch_coverage_cd["hilite_27"])
+        self.assertTrue(branch_coverage_cd["hilite_28"])
+        self.assertTrue(branch_coverage_cd["hilite_29"])
 
         print("-" * 10 + "hilite Test 3" + "-" * 10)
         print_coverage(branch_coverage_cd)
@@ -90,7 +76,7 @@ class TestCodeHilite(unittest.TestCase):
     #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
-    def test_hilite4_with_invalid_formatter(self, mock_highlight, mock_get_lexer):
+    def test3_hilite_with_invalid_formatter(self, mock_highlight, mock_get_lexer):
         """Test hilite with invalid pygments formatter."""
         code = CodeHilite('print("Hello, World!")', lang='python', pygments_formatter='invalid_formatter')
 
@@ -108,7 +94,7 @@ class TestCodeHilite(unittest.TestCase):
     #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
-    def test_hilite5_with_linenos(self, mock_highlight, mock_get_lexer):
+    def test4_hilite_with_linenos(self, mock_highlight, mock_get_lexer):
         """Test hilite with line numbers enabled."""
         code = CodeHilite('print("Hello, World!")', lang='python', linenums=True)
 
@@ -118,14 +104,12 @@ class TestCodeHilite(unittest.TestCase):
         result = code.hilite()
 
         self.assertIn('highlighted_code', result)
-        self.assertTrue(branch_coverage_cd["hilite_14"])
-        self.assertTrue(branch_coverage_cd["hilite_27"])
 
         print("-" * 10 + "hilite Test 5" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
     #@unittest.skip("Tests added are skipped to show")
-    def test_hilite6_without_shebang(self):
+    def test5_hilite_without_shebang(self):
         """Test hilite without shebang parsing."""
         code = CodeHilite('print("Hello, World!")', lang=None)
 
@@ -140,7 +124,7 @@ class TestCodeHilite(unittest.TestCase):
     #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
-    def test_hilite7_with_custom_formatter(self, mock_highlight, mock_get_lexer):
+    def test6_hilite_with_custom_formatter(self, mock_highlight, mock_get_lexer):
         """Test hilite with custom pygments formatter callable."""
         def custom_formatter(lang_str, **options):
             return 'mocked_formatter'
@@ -161,7 +145,7 @@ class TestCodeHilite(unittest.TestCase):
     #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
-    def test_hilite8_with_double_fallback(self, mock_highlight, mock_get_lexer):
+    def test7_hilite_with_double_fallback(self, mock_highlight, mock_get_lexer):
         """Test hilite with double fallback for lexer."""
         code = CodeHilite('print("Hello, World!")', lang=None, guess_lang=False)
 
@@ -179,7 +163,7 @@ class TestCodeHilite(unittest.TestCase):
     #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
-    def test_hilite9_no_pygments_with_classes(self, mock_highlight, mock_get_lexer):
+    def test8_hilite_no_pygments_with_classes(self, mock_highlight, mock_get_lexer):
         """Test hilite without pygments but with language class and line numbers."""
         code = CodeHilite('print("Hello, World!")', use_pygments=False, lang='python', linenos=True)
 
@@ -196,9 +180,4 @@ class TestCodeHilite(unittest.TestCase):
         print_coverage(branch_coverage_cd)
 
 if __name__ == '__main__':
-    print("-"*3 + "hilite Coverage Without Included Tests" + "-"*3)
-    print_coverage(branch_coverage_cd)
-
-    suite = OrderedTestSuite()
-    runner = unittest.TextTestRunner()
-    runner.run
+    unittest.main()
