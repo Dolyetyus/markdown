@@ -326,13 +326,17 @@ class CodeHiliteExtension(Extension):
         """ Default configuration options. """
 
         for key, value in kwargs.items():
+            branch_coverage_hiliteExtInit["codehilite_initExt_43"] = True
             if key in self.config:
+                branch_coverage_hiliteExtInit["codehilite_initExt_44"] = True
                 self.setConfig(key, value)
             else:
+                branch_coverage_hiliteExtInit["codehilite_initExt_45"] = True
                 # manually set unknown keywords.
                 if isinstance(value, str):
                     try:
                         # Attempt to parse `str` as a boolean value
+                        branch_coverage_hiliteExtInit["codehilite_initExt_46"] = True
                         value = parseBoolValue(value, preserve_none=True)
                     except ValueError:
                         pass  # Assume it's not a boolean value. Use as-is.
