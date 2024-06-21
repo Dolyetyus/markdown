@@ -7,7 +7,7 @@ class testInit(unittest.TestCase):
     
     #@unittest.skip("Tests added are skipped to show")
     def test_d_no_options(self):
-        print("-----------------Test 4-------------------------") 
+        print("-"*10 + "Test 4" + "-"*10)
         code = CodeHilite(src="print('Hello, World!')")
         assert code.src == "print('Hello, World!')"
         self.assertTrue(branch_coverage_hiliteInit["codehilite_init_40"])
@@ -17,7 +17,7 @@ class testInit(unittest.TestCase):
         
     #@unittest.skip("Tests added are skipped to show")
     def test_a_no_linenos(self):
-        print("-----------------Test 1-------------------------") 
+        print("-"*10 + "Test 1" + "-"*10)
         code = CodeHilite(src="print('Hello, World!')", cssclass='class', wrapcode=False)
         assert code.src == "print('Hello, World!')"
         self.assertTrue(branch_coverage_hiliteInit["codehilite_init_40"])
@@ -28,7 +28,7 @@ class testInit(unittest.TestCase):
         
     #@unittest.skip("Tests added are skipped to show")
     def test_b_no_css(self):
-        print("-----------------Test 2-------------------------") 
+        print("-"*10 + "Test 2" + "-"*10)
         code = CodeHilite(src="print('Hello, World!')", linenos='inline', wrapcode=False)
         assert code.src == "print('Hello, World!')"
         self.assertTrue(branch_coverage_hiliteInit["codehilite_init_41"])
@@ -39,7 +39,7 @@ class testInit(unittest.TestCase):
 
     #@unittest.skip("Tests added are skipped to show")
     def test_c_no_wrap(self):
-        print("-----------------Test 3-------------------------") 
+        print("-"*10 + "Test 3" + "-"*10)
         code = CodeHilite(src="print('Hello, World!')", linenos='inline', cssclass='class')
         assert code.src == "print('Hello, World!')"
         self.assertTrue(branch_coverage_hiliteInit["codehilite_init_42"])
@@ -50,8 +50,7 @@ class testInit(unittest.TestCase):
         
     @unittest.skip("Tests added are skipped to show")
     def test_A_no_coverage(self):
-        print("-----------------Test 0(no_coverage)-------------------------") 
-        #print("-"*10 + "codehilite Init Coverage" + "-"*10)
+        print("-"*10 + "Test 0(no_coverage)" + "-"*10) 
         print_coverage(branch_coverage_hiliteInit)
  
         

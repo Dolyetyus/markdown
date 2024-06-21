@@ -32,15 +32,17 @@ std_config = {
         }
 
 class testInit(unittest.TestCase):
+    #@unittest.skip("Tests added are skipped to show")
     def test_a_no_args(self):
-        print("-----------------Test 0-------------------------") 
+        print("-"*10 + "Test 1" + "-"*10)
         code = CodeHiliteExtension()
         self.assertFalse(branch_coverage_hiliteExtInit["codehilite_initExt_43"])
         assert code.config == std_config
         print_coverage(branch_coverage_hiliteExtInit)
-        
+    
+    #@unittest.skip("Tests added are skipped to show")   
     def test_b_key_in_config(self):
-        print("-----------------Test 1-------------------------") 
+        print("-"*10 + "Test 2" + "-"*10)
         code = CodeHiliteExtension(linenums = 'False', use_pygments = 'False')
         self.assertTrue(branch_coverage_hiliteExtInit["codehilite_initExt_43"])
         self.assertTrue(branch_coverage_hiliteExtInit["codehilite_initExt_44"])
@@ -48,30 +50,31 @@ class testInit(unittest.TestCase):
         assert code.config['use_pygments'] == [False, 'Highlight code blocks with pygments. Disable if using a JavaScript library. Default: `True`.']
         print_coverage(branch_coverage_hiliteExtInit)
         
+    #@unittest.skip("Tests added are skipped to show")
     def test_c_key_not_in_config_and_not_string(self):
-        print("-----------------Test 2-------------------------") 
+        print("-"*10 + "Test 3" + "-"*10)
         code = CodeHiliteExtension(not_string = 34)
         self.assertTrue(branch_coverage_hiliteExtInit["codehilite_initExt_43"])
         self.assertTrue(branch_coverage_hiliteExtInit["codehilite_initExt_45"])
         self.assertFalse(branch_coverage_hiliteExtInit["codehilite_initExt_46"])
         #print(code.config['not_string'])
         assert code.config['not_string'] == [34, '']
-        #print(code.config['unknown'])
-        #assert code.config['unknown'] == [True, '']
-        #assert code.config['CJ'] == ['Follow the train', '']
-        #print(code.config['CJ'])
         print_coverage(branch_coverage_hiliteExtInit)
         
+    #@unittest.skip("Tests added are skipped to show")
     def test_d_key_not_in_config_but_string(self):
-        print("-----------------Test 3-------------------------") 
+        print("-"*10 + "Test 4" + "-"*10)
         code = CodeHiliteExtension(unknown = 'True', CJ = 'Follow the train')
         self.assertTrue(branch_coverage_hiliteExtInit["codehilite_initExt_43"])
         self.assertTrue(branch_coverage_hiliteExtInit["codehilite_initExt_45"])
         self.assertTrue(branch_coverage_hiliteExtInit["codehilite_initExt_46"])
-        #print(code.config['unknown'])
         assert code.config['unknown'] == [True, '']
         assert code.config['CJ'] == ['Follow the train', '']
-        #print(code.config['CJ'])
+        print_coverage(branch_coverage_hiliteExtInit)
+        
+    @unittest.skip("Tests added are skipped to show")
+    def test_A_no_coverage(self):
+        print("-"*10 + "Test 0(no_coverage)" + "-"*10)
         print_coverage(branch_coverage_hiliteExtInit)
 
     
