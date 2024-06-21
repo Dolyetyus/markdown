@@ -5,7 +5,7 @@ branch_coverage_HT = {
     "run_3": False 
 }
 
-branch_coverage_html_sub = {
-    "html_sub_1": False,
-    "html_sub_2": False
+branch_coverage_html_2_text = {
+    "html_2_text_1": False,
+    "html_2_text_2": False
 }
