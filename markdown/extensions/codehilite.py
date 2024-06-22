@@ -114,8 +114,6 @@ class CodeHilite:
 
     def __init__(self, src: str, **options):
         self.src = src
-        print('Options: ')
-        print(options)
         self.lang: str | None = options.pop('lang', None)
         self.guess_lang: bool = options.pop('guess_lang', True)
         self.use_pygments: bool = options.pop('use_pygments', True)
