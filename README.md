@@ -195,7 +195,7 @@ The tests added cover the following scenarios:
 - Test d checks correct behavior with an empty arguments list to see if the fallback values are applied correctly
 - Test A is just to show the original coverage, 0%
 
-### Test: CodeHiliteExtension.__init__
+#### Test: CodeHiliteExtension.__init__
 
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/f1b55e565c0ee093a67782e10ac1568dcf0b095e)
 
