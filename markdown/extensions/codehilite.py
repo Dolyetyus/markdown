@@ -193,8 +193,19 @@ class CodeHilite:
             )
 
     def _parseHeader(self) -> None:
-        """ Determines language of a code block from shebang line and whether the
-        said line should be removed or left in place.
+        """
+        Determines language of a code block from shebang line and whether the
+        said line should be removed or left in place. If the shebang line
+        contains a path (even a single /) then it is assumed to be a real
+        shebang line and left alone. However, if no path is given
+        (e.i.: `#!python` or `:::python`) then it is assumed to be a mock shebang
+        for language identification of a code fragment and removed from the
+        code block prior to processing for code highlighting. When a mock
+        shebang (e.i: `#!python`) is found, line numbering is turned on. When
+        colons are found in place of a shebang (e.i.: `:::python`), line
+        numbering is left in the current state - off by default.
+        Also parses optional list of highlight lines, like:
+            :::python hl_lines="1 3"
         """
 
         import re
