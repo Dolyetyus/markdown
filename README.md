@@ -84,7 +84,7 @@ Screenshot of the coverage results:</p>
 
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/269bf63be79272e5e8d8dcd7de1f611e56f37dde)
 
-<img src="https://ibb.co/xCKD2Q7" width="600"></p>
+<img src="https://i.ibb.co/W0xMY1H/func1-no-Coverage.png" width="600"></p>
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 
@@ -92,7 +92,7 @@ Screenshot of the coverage results:</p>
 
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/7700edc896123977a8ddbbf859d33c34de81d6be)
 
-<img src="https://ibb.co/y0rFZh2" width="600"></p>
+<img src="https://i.ibb.co/N9Lxxfp/func2-no-Coverage.png" width="600"></p>
 
 ## Coverage improvement
 
@@ -178,17 +178,30 @@ The new tests check the function in 9 cases:
 
 #### Test: CodeHilite.__init__
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+[Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/2e50eaa85cbf09d070186505c287855440226f93)
 
-<Provide a screenshot of the old coverage results (the same as you already showed above)>
+**Old coverage result:** </p>
+<img src="https://i.ibb.co/W0xMY1H/func1-no-Coverage.png" width="600"></p>
 
-<Provide a screenshot of the new coverage results>
+**New coverage result:** </p>
+<img src="https://i.ibb.co/0Y76LsW/func1-coverage.png" width="600"></p>
 
-<State the coverage improvement with a number and elaborate on why the coverage is improved>
+As the above screenshots show, the coverage increased from 0% to 100%. There were no tests that covered this initialisation function. After adding 4 tests that check the behaviour of the function and checks the branch coverage for all 3 branches, the coverage increased.
 
-<Test 2>
+The tests added cover the following scenarios:
+- Test a 
 
-<Provide the same kind of information provided for Test 1>
+### Test: CodeHiliteExtension.__init__
+
+[Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/f1b55e565c0ee093a67782e10ac1568dcf0b095e)
+
+**Old coverage result:** </p>
+<img src="https://i.ibb.co/N9Lxxfp/func2-no-Coverage.png" width="600"></p>
+
+**New coverage result:** </p>
+<img src="https://i.ibb.co/w4p1wKG/func2-coverage.png" width="600"></p>
+
+Explanation
 
 ### Overall
 

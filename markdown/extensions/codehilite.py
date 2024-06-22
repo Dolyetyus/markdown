@@ -25,7 +25,6 @@ from . import Extension
 from ..treeprocessors import Treeprocessor
 from ..util import parseBoolValue
 from typing import TYPE_CHECKING, Callable, Any
-from ..coverage_tracker import branch_coverage_hiliteExtInit, branch_coverage_hiliteInit
 
 if TYPE_CHECKING:  # pragma: no cover
     import xml.etree.ElementTree as etree
@@ -123,17 +122,11 @@ class CodeHilite:
         self.lang_prefix: str = options.pop('lang_prefix', 'language-')
         self.pygments_formatter: str | Callable = options.pop('pygments_formatter', 'html')
         if 'linenos' not in options:
-            print("hits no linenons")
-            branch_coverage_hiliteInit["codehilite_init_40"] = True
             options['linenos'] = options.pop('linenums', None)
         if 'cssclass' not in options:
-            print("hits no cssclass")
-            branch_coverage_hiliteInit["codehilite_init_41"] = True
             options['cssclass'] = options.pop('css_class', 'codehilite')
         if 'wrapcode' not in options:
             # Override Pygments default
-            print("hits no wrapcode")
-            branch_coverage_hiliteInit["codehilite_init_42"] = True
             options['wrapcode'] = True
         # Disallow use of `full` option
         options['full'] = False
