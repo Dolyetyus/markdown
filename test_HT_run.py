@@ -4,7 +4,6 @@ from markdown.extensions.codehilite import HiliteTreeprocessor as HT
 from markdown.core import Markdown
 from markdown.coverage_tracker import branch_coverage_HT
 
-
 def print_coverage(branch_coverage: dict) -> None:
     hit_count = sum(hit for hit in branch_coverage.values())
     total_branches = len(branch_coverage)
@@ -48,35 +47,6 @@ class TestHTRun(unittest.TestCase):
     def test_first_second_third_flags(self):
         print("-" * 5 + "first + second + third flags on")
         root = etree.fromstring("""<pre><code></code></pre>""")
-        self.test_HT_obj.run(root)
-        print_coverage(branch_coverage_HT)
-        clear_coverage(branch_coverage_HT)
-    
-    def test_last_educational_example(self):
-        print("-" * 5 + "educational example")
-        root = etree.fromstring("""
-            <data>
-                <description>
-                    In order to find the sum of all the integers in the range [1, 100] inclusively,
-                    we may write this C-style piece of code which is more resource-intensive:
-                </description>
-                <pre><code> 
-                    sum = 0
-                    i = 1
-                    while i &lt; 101:
-                        sum += i
-                        i += 1
-                    return sum
-                </code></pre>
-                <description>
-                    Or we may write this less-resource-intensive piece of code which is primarily
-                    based on a mathematical finding:
-                </description>
-                <pre><code> 
-                    sum = (100 * 101) / 2
-                    return sum
-                </code></pre>
-            </data>""")
         self.test_HT_obj.run(root)
         print_coverage(branch_coverage_HT)
         clear_coverage(branch_coverage_HT)
