@@ -78,21 +78,21 @@ Screenshot of the coverage results:</p>
 
 Screenshot of the coverage results:</p>
 
-**Alexandru Florea**
+**Alexandru-Valentin Florea**
 
-- Function name: 
+#### Function name: CodeHilite.__init__
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+[Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/269bf63be79272e5e8d8dcd7de1f611e56f37dde)
 
-Screenshot of the coverage results:</p>
+<img src="https://ibb.co/xCKD2Q7" width="600"></p>
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 
-- Function name:
+#### Function name: CodeHiliteExtension.__init__
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+[Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/7700edc896123977a8ddbbf859d33c34de81d6be)
 
-Screenshot of the coverage results:</p>
+<img src="https://ibb.co/y0rFZh2" width="600"></p>
 
 ## Coverage improvement
 
@@ -174,9 +174,9 @@ The new tests check the function in 9 cases:
 
 <Provide the same kind of information provided for Test 1>
 
-**Alexandru Florea**
+**Alexandru-Valentin Florea**
 
-<Test 1>
+#### Test: CodeHilite.__init__
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
 
