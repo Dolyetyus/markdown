@@ -26,3 +26,8 @@ class TestHTML2Text(unittest.TestCase):
         stashedHTML2text(STX + "wzxhzdk:0" + ETX + "testing" + STX + "wzxhzdk:1" + ETX, self.test_md)
         print_coverage(branch_coverage_html_2_text)
         clear_coverage(branch_coverage_html_2_text)
+
+if __name__ == '__main__':
+    print("-" * 3 + "html_2_text Coverage Without Included Tests" + "-" * 3)
+    print_coverage(branch_coverage_html_2_text)
+    unittest.main()
