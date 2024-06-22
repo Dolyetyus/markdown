@@ -122,14 +122,11 @@ class CodeHilite:
         self.pygments_formatter: str | Callable = options.pop('pygments_formatter', 'html')
 
         if 'linenos' not in options:
-            branch_coverage_hiliteInit["codehilite_init_40"] = True
             options['linenos'] = options.pop('linenums', None)
         if 'cssclass' not in options:
-            branch_coverage_hiliteInit["codehilite_init_41"] = True
             options['cssclass'] = options.pop('css_class', 'codehilite')
         if 'wrapcode' not in options:
             # Override Pygments default
-            branch_coverage_hiliteInit["codehilite_init_42"] = True
             options['wrapcode'] = True
         # Disallow use of `full` option
         options['full'] = False
@@ -326,17 +323,13 @@ class CodeHiliteExtension(Extension):
         """ Default configuration options. """
 
         for key, value in kwargs.items():
-            branch_coverage_hiliteExtInit["codehilite_initExt_43"] = True
             if key in self.config:
-                branch_coverage_hiliteExtInit["codehilite_initExt_44"] = True
                 self.setConfig(key, value)
             else:
-                branch_coverage_hiliteExtInit["codehilite_initExt_45"] = True
                 # manually set unknown keywords.
                 if isinstance(value, str):
                     try:
                         # Attempt to parse `str` as a boolean value
-                        branch_coverage_hiliteExtInit["codehilite_initExt_46"] = True
                         value = parseBoolValue(value, preserve_none=True)
                     except ValueError:
                         pass  # Assume it's not a boolean value. Use as-is.
