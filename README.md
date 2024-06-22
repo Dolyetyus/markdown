@@ -212,8 +212,8 @@ The tests added cover the following scenarios:
 - Test b checks correct behavior with a key that changes a value from default config 
 - Test c checks correct behavior with a key that isn't part of the original config dictionary and also isn't a string so it can't be passed to the parsing function
 - Test d checks correct behavior with 
-    - 1. a key that isn't part of the original config dictionary but is a string and can be parsed into a bool
-    - 2. a key that isn't part of the original config dictionary but is a string but can't be parsed into a bool
+    - 1. a key that isn't part of the original config dictionary, is a string and can be parsed into a bool
+    - 2. a key that isn't part of the original config dictionary, is a string but can't be parsed into a bool
 - Test A is just to show the original coverage, 0%
 
 ### Overall
