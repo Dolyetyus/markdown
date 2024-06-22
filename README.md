@@ -189,7 +189,11 @@ The new tests check the function in 9 cases:
 As the above screenshots show, the coverage increased from 0% to 100%. There were no tests that covered this initialisation function. After adding 4 tests that check the behaviour of the function and checks the branch coverage for all 3 branches, the coverage increased.
 
 The tests added cover the following scenarios:
-- Test a 
+- Test a checks correct behavior with missing 'linenos' key in the arguments list
+- Test b checks correct behavior with missing 'css' key in the arguments list
+- Test c checks correct behavior with missing 'wrap' key in the arguments list
+- Test d checks correct behavior with an empty arguments list to see if the fallback values are applied correctly
+- Test A is just to show the original coverage, 0%
 
 ### Test: CodeHiliteExtension.__init__
 
@@ -201,7 +205,16 @@ The tests added cover the following scenarios:
 **New coverage result:** </p>
 <img src="https://i.ibb.co/w4p1wKG/func2-coverage.png" width="600"></p>
 
-Explanation
+As the above screenshots show, the coverage increased from 0% to 100%. There were no tests that covered this initialisation function. After adding 4 tests that check the behaviour of the function and checks the branch coverage for all 4 branches, the coverage increased.
+
+The tests added cover the following scenarios:
+- Test a checks correct behavior with empty config list, to see if the standard one is applied correctly
+- Test b checks correct behavior with a key that changes a value from default config 
+- Test c checks correct behavior with a key that isn't part of the original config dictionary and also isn't a string so it can't be passed to the parsing function
+- Test d checks correct behavior with 
+    - 1. a key that isn't part of the original config dictionary but is a string and can be parsed into a bool
+    - 2. a key that isn't part of the original config dictionary but is a string but can't be parsed into a bool
+- Test A is just to show the original coverage, 0%
 
 ### Overall
 
