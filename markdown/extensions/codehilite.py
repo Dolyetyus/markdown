@@ -122,11 +122,14 @@ class CodeHilite:
         self.pygments_formatter: str | Callable = options.pop('pygments_formatter', 'html')
 
         if 'linenos' not in options:
+            branch_coverage_hiliteInit["codehilite_init_40"] = True
             options['linenos'] = options.pop('linenums', None)
         if 'cssclass' not in options:
+            branch_coverage_hiliteInit["codehilite_init_41"] = True
             options['cssclass'] = options.pop('css_class', 'codehilite')
         if 'wrapcode' not in options:
             # Override Pygments default
+            branch_coverage_hiliteInit["codehilite_init_42"] = True
             options['wrapcode'] = True
         # Disallow use of `full` option
         options['full'] = False
