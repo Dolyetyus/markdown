@@ -194,18 +194,18 @@ class CodeHilite:
 
     def _parseHeader(self) -> None:
         """
-            Determines language of a code block from shebang line and whether the
-            said line should be removed or left in place. If the shebang line
-            contains a path (even a single /) then it is assumed to be a real
-            shebang line and left alone. However, if no path is given
-            (e.i.: `#!python` or `:::python`) then it is assumed to be a mock shebang
-            for language identification of a code fragment and removed from the
-            code block prior to processing for code highlighting. When a mock
-            shebang (e.i: `#!python`) is found, line numbering is turned on. When
-            colons are found in place of a shebang (e.i.: `:::python`), line
-            numbering is left in the current state - off by default.
-            Also parses optional list of highlight lines, like:
-                :::python hl_lines="1 3"
+        Determines language of a code block from shebang line and whether the
+        said line should be removed or left in place. If the shebang line
+        contains a path (even a single /) then it is assumed to be a real
+        shebang line and left alone. However, if no path is given
+        (e.i.: `#!python` or `:::python`) then it is assumed to be a mock shebang
+        for language identification of a code fragment and removed from the
+        code block prior to processing for code highlighting. When a mock
+        shebang (e.i: `#!python`) is found, line numbering is turned on. When
+        colons are found in place of a shebang (e.i.: `:::python`), line
+        numbering is left in the current state - off by default.
+        Also parses optional list of highlight lines, like:
+            :::python hl_lines="1 3"
             """
 
         import re
@@ -226,7 +226,7 @@ class CodeHilite:
         # search first line for shebang
         m = c.search(fl)
         if m:
-            branch_coverage_parse_header["parse_header_32"] = True
+
             # we have a match
             try:
 
@@ -235,19 +235,19 @@ class CodeHilite:
                 self.lang = None
 
             if m.group('path'):
-                branch_coverage_parse_header["parse_header_33"] = True
+
                 # path exists - restore first line
                 lines.insert(0, fl)
 
             if self.options['linenos'] is None and m.group('shebang'):
-                branch_coverage_parse_header["parse_header_34"] = True
+
                 # Overridable and Shebang exists - use line numbers
                 self.options['linenos'] = True
 
-            branch_coverage_parse_header["parse_header_35"] = True
+
             self.options['hl_lines'] = parse_hl_lines(m.group('hl_lines'))
         else:
-            branch_coverage_parse_header["parse_header_36"] = True
+
             # No match
             lines.insert(0, fl)
 
