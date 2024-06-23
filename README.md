@@ -53,12 +53,15 @@ Screenshot of the coverage results:</p>
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/701416ad42d5470a5cb28fe74d31e16a9e329537?diff=unified&w=0)
 
 Screenshot of the coverage results:</p>
+<img src="https://i.ibb.co/Mcc43GX/ss-init-cov.jpg" alt="screenshot-of-initial-coverage"></p>
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 
-- Function name:
+- Function name: stashedHTML2text._html_sub
 
 <Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+
+[Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/a8ac1c3c71bfb44c8992834f880e25df08a1c830)
 
 Screenshot of the coverage results:</p>
 
