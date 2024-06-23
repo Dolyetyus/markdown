@@ -44,7 +44,7 @@ Screenshot of the coverage results:</p>
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/d07b27274c416ae258ec3d1003a9b26a51fed749?diff=unified&w=1)
 
 Screenshot of the coverage results:</p>
-<img src="https://i.ibb.co/HGK6X27/image.png" width="600"></p>
+<img src="https://github.com/Dolyetyus/markdown/assets/67073431/813c40f4-0911-4f5a-9f5b-6852bde68676" width="600"></p>
 
 **Mihnea Bârsan**
 
@@ -124,10 +124,10 @@ The new tests check the function in 3 cases:
 [Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/f8a67f6aab90ee436302e72e8ccdba6cd3e79ba1?diff=unified&w=1)
 
 **Old coverage result:** </p>
-<img src="https://i.ibb.co/HGK6X27/image.png" width="600"></p>
+<img src="https://github.com/Dolyetyus/markdown/assets/67073431/813c40f4-0911-4f5a-9f5b-6852bde68676" width="600"></p>
 
 **New coverage result:** </p>
-<img src="https://github.com/Dolyetyus/markdown/assets/67073431/a8b3c9aa-b8b1-4f12-a3c8-f591d1aaafe2" width="600"></p>
+<img src="https://github.com/Dolyetyus/markdown/assets/67073431/09afba90-5145-46f5-abb5-6c16a9271731" width="600"></p>
 
 As can be seen from the tests, the coverage increased from 0% to 100%. There were no tests that cover this function. After adding 9 tests that check the behaviour of the function and checks the branch coverage for all 9 branches, the coverage increased with each test a little more. 
 
