@@ -226,7 +226,7 @@ class CodeHilite:
         # search first line for shebang
         m = c.search(fl)
         if m:
-
+            branch_coverage_parse_header["parse_header_32"] = True
             # we have a match
             try:
 
@@ -235,19 +235,19 @@ class CodeHilite:
                 self.lang = None
 
             if m.group('path'):
-
+                branch_coverage_parse_header["parse_header_33"] = True
                 # path exists - restore first line
                 lines.insert(0, fl)
 
             if self.options['linenos'] is None and m.group('shebang'):
-
+                branch_coverage_parse_header["parse_header_34"] = True
                 # Overridable and Shebang exists - use line numbers
                 self.options['linenos'] = True
 
-
+            branch_coverage_parse_header["parse_header_35"] = True
             self.options['hl_lines'] = parse_hl_lines(m.group('hl_lines'))
         else:
-
+            branch_coverage_parse_header["parse_header_36"] = True
             # No match
             lines.insert(0, fl)
 
