@@ -46,11 +46,11 @@ Screenshot of the coverage results:</p>
 Screenshot of the coverage results:</p>
 <img src="https://github.com/Dolyetyus/markdown/assets/67073431/813c40f4-0911-4f5a-9f5b-6852bde68676" width="600"></p>
 
-**Mihnea Bârsan**
+**Mihnea-Andrei Bârsan**
 
-- Function name: 
+- Function name: HiliteTreeprocessor.run 
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+[Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/701416ad42d5470a5cb28fe74d31e16a9e329537?diff=unified&w=0)
 
 Screenshot of the coverage results:</p>
 
