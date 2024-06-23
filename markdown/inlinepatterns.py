@@ -170,7 +170,7 @@ LINE_BREAK_RE = r'  \n'
 
 
 def dequote(string: str) -> str:
-    """Remove quotes from around a string."""
+    "   ""Remove quotes from around a string."""
     if ((string.startswith('"') and string.endswith('"')) or
        (string.startswith("'") and string.endswith("'"))):
         branch_coverage_dequote["dequote_30"] = True
