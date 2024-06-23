@@ -173,10 +173,10 @@ def dequote(string: str) -> str:
     "   ""Remove quotes from around a string."""
     if ((string.startswith('"') and string.endswith('"')) or
        (string.startswith("'") and string.endswith("'"))):
-
+        branch_coverage_dequote["dequote_30"] = True
         return string[1:-1]
     else:
-
+        branch_coverage_dequote["dequote_31"] = True
         return string
 
 
