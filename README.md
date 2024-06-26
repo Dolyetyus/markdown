@@ -67,19 +67,22 @@ Screenshot of the coverage results:</p>
 
 **Robert Sofroni**
 
-- Function name: 
+#### Function name: dequote
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+[Link to the patch (diff)](https://github.com/Python-Markdown/markdown/commit/69a60b1e905feaabf27a46fa67fd24ba4587ab6b)
+
 
 Screenshot of the coverage results:</p>
+<img src="https://i.ibb.co/r6jWdBD/Screenshot-2024-06-23-034728.png" width="600"></p>
 
 <Provide a screenshot of the coverage results output by the instrumentation>
 
-- Function name:
+#### Function name: _parseHeader
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+[Link to the patch (diff)](https://github.com/Python-Markdown/markdown/commit/a5282a1916a2b6edd4e885bcbe5cf542f8f22c00)
 
 Screenshot of the coverage results:</p>
+<img src="https://i.ibb.co/wp75qTX/Screenshot-2024-06-23-041227.png" width="600"></p>
 
 **Alexandru-Valentin Florea**
 
@@ -163,19 +166,43 @@ The new tests check the function in 9 cases:
 
 **Robert Sofroni**
 
-<Test 1>
+#### Test: dequote
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+[Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/7052e24d922ce604245f1db560cd34c8cc1ad8ac)
 
-<Provide a screenshot of the old coverage results (the same as you already showed above)>
+**Old coverage result:** </p>
+<img src="https://i.ibb.co/r6jWdBD/Screenshot-2024-06-23-034728.png" width="600"></p>
 
-<Provide a screenshot of the new coverage results>
+**New coverage result:** </p>
+<img src="https://i.ibb.co/2N783cr/image.png" width="600"></p>
 
-<State the coverage improvement with a number and elaborate on why the coverage is improved>
+As can be seen from the tests, the coverage increased from 0% to 100%. There were no tests that covered this function. After adding 3 tests that check the behavior of the function and check the branch coverage for all 3 branches, the coverage increased. 
 
-<Test 2>
+The new tests check the function in 3 cases:
+- Tests dequote when given a text with double quotes
+- Tests dequote when given a text with single quotes
+- Tests dequote when given a text that has no quotes
 
-<Provide the same kind of information provided for Test 1>
+
+#### Test: _parseHeader
+
+[Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/7052e24d922ce604245f1db560cd34c8cc1ad8ac)
+
+**Old coverage result:** </p>
+<img src="https://i.ibb.co/wp75qTX/Screenshot-2024-06-23-041227.png" width="600"></p>
+
+**New coverage result:** </p>
+<img src="https://i.ibb.co/C7jG761/image.png" width="600"></p>
+<img src="https://i.ibb.co/c2Zmh7b/image.png" width="600"></p>
+
+As can be seen from the tests, the coverage increased from 0% to 100%. There were no tests that covered this function. After adding 4 tests that check the behavior of the function and check the branch coverage for all 5 branches, the coverage increased with each test a little more. 
+
+The new tests check the function in 5 cases:
+- Tests _parseHeader when given a real shebang line at the beginning of the code block
+- Tests _parseHeader when given a mock shebang line without a path
+- Tests _parseHeader when given colons instead of a shebang line to indicate the language
+- Tests _parseHeader when given a shebang-like line with highlight lines specified
+- Tests _parseHeader that has no shebang or colon line at the beginning of the code block
 
 **Alexandru-Valentin Florea**
 
