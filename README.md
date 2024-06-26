@@ -60,7 +60,7 @@ Screenshot of the coverage results:</p>
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/a8ac1c3c71bfb44c8992834f880e25df08a1c830)
 
 Screenshot of the coverage results:</p>
-<img src="https://i.ibb.co/Cnw9PW4/ss-init-cov-2.jpg" alt="ss-init-cov-2"></p>
+<img src="https://i.ibb.co/Cnw9PW4/ss-init-cov-2.jpg" alt="screenshot-of-initial-coverage"></p>
 
 **Robert Sofroni**
 
@@ -166,6 +166,11 @@ The initial tests of the forked repository covered 0% of the function HiliteTree
 #### Test: stashedHTML2text._html_sub
 
 [Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/a084e1630a62daa547d50096e98cd7b380a95cc1)
+
+**Old coverage result:**</p>
+<img src="https://i.ibb.co/Cnw9PW4/ss-init-cov-2.jpg" alt="screenshot-of-initial-coverage"></p>
+
+**New coverage result:**</p>
 
 
 **Robert Sofroni**
