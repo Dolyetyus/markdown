@@ -48,22 +48,19 @@ Screenshot of the coverage results:</p>
 
 **Mihnea-Andrei Bârsan**
 
-- Function name: HiliteTreeprocessor.run 
+#### Function name: HiliteTreeprocessor.run 
 
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/701416ad42d5470a5cb28fe74d31e16a9e329537?diff=unified&w=0)
 
 Screenshot of the coverage results:</p>
 <img src="https://i.ibb.co/Mcc43GX/ss-init-cov.jpg" alt="screenshot-of-initial-coverage"></p>
 
-<Provide a screenshot of the coverage results output by the instrumentation>
-
-- Function name: stashedHTML2text._html_sub
-
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the instrumented code to gather coverage measurements>
+#### Function name: stashedHTML2text._html_sub
 
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/a8ac1c3c71bfb44c8992834f880e25df08a1c830)
 
 Screenshot of the coverage results:</p>
+<img src="https://i.ibb.co/Cnw9PW4/ss-init-cov-2.jpg" alt="ss-init-cov-2"></p>
 
 **Robert Sofroni**
 
@@ -150,11 +147,12 @@ The new tests check the function in 9 cases:
 
 **Mihnea Bârsan**
 
-<Test 1>
+#### Test: HiliteTreeprocessor.run
 
-<Show a patch (diff) or a link to a commit made in your forked repository that shows the new/enhanced test>
+[Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/21436a094c8b1fbb607b7896d077def9aae80609)
 
-<Provide a screenshot of the old coverage results (the same as you already showed above)>
+**Old coverage result:** </p>
+<img src="https://i.ibb.co/Mcc43GX/ss-init-cov.jpg" alt="screenshot-of-initial-coverage"></p>
 
 <Provide a screenshot of the new coverage results>
 
