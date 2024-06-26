@@ -154,13 +154,19 @@ The new tests check the function in 9 cases:
 **Old coverage result:** </p>
 <img src="https://i.ibb.co/Mcc43GX/ss-init-cov.jpg" alt="screenshot-of-initial-coverage"></p>
 
-<Provide a screenshot of the new coverage results>
+**New coverage result:** </p>
+<img src="https://i.ibb.co/gz8WSjm/image-2024-06-26-212147612.png" alt="screenshot-of-coverage" width="600"></p>
 
-<State the coverage improvement with a number and elaborate on why the coverage is improved>
 
-<Test 2>
+The initial tests of the forked repository covered 0% of the function HiliteTreeprocessor.run and, after finishing the tests in test_HT_run.py, the tests of the forked repository cover 100% of the function HiliteTreeprocessor.run.Considering that HiliteTreeprocessor.run takes as input an XML element tree, The tests in test_HT_run.py cover these scenarios:
+- the inputted XML code contains at least one &lt;pre&gt; block, but each such &lt;pre&gt; block does not contain exactly one subblock or does not contain a &lt;code&gt; subblock;
+- the inputted XML code contains at least one &lt;pre&gt; block and each such &lt;pre&gt; block contains exactly one subblock and that subblock is a &lt;code&gt; subblock;
+- the inputted XML code contains at least one &lt;pre&gt; block and each such &lt;pre&gt; block contains exactly one subblock and that subblock is a &lt;code&gt; subblock, but this &lt;code&gt; subblock contains no text.
 
-<Provide the same kind of information provided for Test 1>
+#### Test: stashedHTML2text._html_sub
+
+[Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/a084e1630a62daa547d50096e98cd7b380a95cc1)
+
 
 **Robert Sofroni**
 
