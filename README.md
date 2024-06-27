@@ -6,11 +6,11 @@ Name: Python-Markdown
 
 URL: https://github.com/Python-Markdown/markdown
 
-Number of lines of code and the tool used to count it: Total number of lines of code: 17295. </br></br>
+Number of lines of code and the tool used to count it: number of lines of code (nloc): 17295. </br></br>
 Tested by using Lizard to count the nloc.</br>
 <img src="https://i.ibb.co/Pr4ZjNc/Whats-App-Image-2024-06-07-at-01-41-00-31a65e5a.jpg" width="600"></p>
 
-Programming language: Python 3
+Programming language: Python
 
 ## Coverage measurement
 
@@ -53,14 +53,14 @@ Screenshot of the coverage results:</p>
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/701416ad42d5470a5cb28fe74d31e16a9e329537?diff=unified&w=0)
 
 Screenshot of the coverage results:</p>
-<img src="https://i.ibb.co/Mcc43GX/ss-init-cov.jpg" alt="screenshot-of-initial-coverage"></p>
+<img src="https://i.ibb.co/Mcc43GX/ss-init-cov.jpg" alt="screenshot-of-initial-coverage" width="600"></p>
 
 #### Function name: stashedHTML2text._html_sub
 
 [Link to the patch (diff)](https://github.com/Dolyetyus/markdown/commit/a8ac1c3c71bfb44c8992834f880e25df08a1c830)
 
 Screenshot of the coverage results:</p>
-<img src="https://i.ibb.co/Cnw9PW4/ss-init-cov-2.jpg" alt="screenshot-of-initial-coverage"></p>
+<img src="https://i.ibb.co/Cnw9PW4/ss-init-cov-2.jpg" alt="screenshot-of-initial-coverage" width="600"></p>
 
 **Robert Sofroni**
 
@@ -105,7 +105,7 @@ Screenshot of the coverage results:</p>
 
 **Said Musab Oguz**
 
-#### Test: codehilite
+#### Test: parse_hl_lines
 
 [Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/f8a67f6aab90ee436302e72e8ccdba6cd3e79ba1?diff=unified&w=1)
 
@@ -145,33 +145,36 @@ The new tests check the function in 9 cases:
 - Tests hilite with double fallback for lexer
 - Tests hilite without pygments but with language class and line numbers
 
-**Mihnea Bârsan**
+**Mihnea-Andrei Bârsan**
 
 #### Test: HiliteTreeprocessor.run
 
 [Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/21436a094c8b1fbb607b7896d077def9aae80609)
 
-**Old coverage result:** </p>
-<img src="https://i.ibb.co/Mcc43GX/ss-init-cov.jpg" alt="screenshot-of-initial-coverage"></p>
+**Old coverage result:**</p>
+<img src="https://i.ibb.co/Mcc43GX/ss-init-cov.jpg" alt="screenshot-of-initial-coverage" width="600"></p>
 
-**New coverage result:** </p>
+**New coverage result:**</p>
 <img src="https://i.ibb.co/gz8WSjm/image-2024-06-26-212147612.png" alt="screenshot-of-coverage" width="600"></p>
 
-
-The initial tests of the forked repository covered 0% of the function HiliteTreeprocessor.run and, after finishing the tests in test_HT_run.py, the tests of the forked repository cover 100% of the function HiliteTreeprocessor.run.Considering that HiliteTreeprocessor.run takes as input an XML element tree, The tests in test_HT_run.py cover these scenarios:
-- the inputted XML code contains at least one &lt;pre&gt; block, but each such &lt;pre&gt; block does not contain exactly one subblock or does not contain a &lt;code&gt; subblock;
-- the inputted XML code contains at least one &lt;pre&gt; block and each such &lt;pre&gt; block contains exactly one subblock and that subblock is a &lt;code&gt; subblock;
-- the inputted XML code contains at least one &lt;pre&gt; block and each such &lt;pre&gt; block contains exactly one subblock and that subblock is a &lt;code&gt; subblock, but this &lt;code&gt; subblock contains no text.
+The initial tests of the forked repository covered 0% of the function HiliteTreeprocessor.run and, after finishing the tests in test_HT_run.py, the tests of the forked repository covered 100% of the function HiliteTreeprocessor.run. Considering that HiliteTreeprocessor.run takes indirectly as input an XML element tree, the tests in test_HT_run.py cover these scenarios:
+- the inputted XML element tree contains at least one &lt;pre&gt; block, but each such &lt;pre&gt; block does not contain exactly one subblock or does not contain a &lt;code&gt; subblock;
+- the inputted XML element tree contains at least one &lt;pre&gt; block and at least one such &lt;pre&gt; block contains exactly one subblock and that subblock is a &lt;code&gt; subblock and this &lt;code&gt; subblock contains some text;
+- the inputted XML element tree contains at least one &lt;pre&gt; block and at least one such &lt;pre&gt; block contains exactly one subblock and that subblock is a &lt;code&gt; subblock, but this &lt;code&gt; subblock contains no text.
 
 #### Test: stashedHTML2text._html_sub
 
 [Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/a084e1630a62daa547d50096e98cd7b380a95cc1)
 
 **Old coverage result:**</p>
-<img src="https://i.ibb.co/Cnw9PW4/ss-init-cov-2.jpg" alt="screenshot-of-initial-coverage"></p>
+<img src="https://i.ibb.co/Cnw9PW4/ss-init-cov-2.jpg" alt="screenshot-of-initial-coverage" width="600"></p>
 
 **New coverage result:**</p>
+<img src="https://i.ibb.co/y5vxZcf/image-2024-06-26-230222894.png" alt="screenshot-of-coverage" width="600"></p>
 
+After finishing the tests in test_html_2_text.py, the tests of the forked repository went from covering 0% of the function stashedHTML2text._html_sub to covering 100% of the function stashedHTML2text._html_sub. Considering that stashedHTML2text._html_sub takes indirectly as input raw HTML, the following scenarios are covered by the tests in test_html_2_text.py:
+- indirectly inputted raw HTML without stripping of entities;
+- indirectly inputted raw HTML with stripping of entities.
 
 **Robert Sofroni**
 
@@ -257,10 +260,10 @@ The tests added cover the following scenarios:
 
 ### Overall
 
-**Results of the old coverage results by running the existing tool (coverage.py):** </p>
+**The old coverage results by running the existing tool (coverage.py):** </p>
 <img src="https://github.com/Dolyetyus/markdown/assets/67073431/d40bb79d-5aa0-4910-9840-a81a2ccd36f7" width="600"></p>
 
-**Results of the new coverage results by running the existing tool using all test modifications made by the group:** </p>
+**The new coverage results by running the existing tool using all test modifications made by the group:** </p>
 *We will run the tool again after all of us are done and we merge our tests*
 
 ## Statement of individual contributions
