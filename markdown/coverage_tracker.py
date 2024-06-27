@@ -1,4 +1,3 @@
-
 # coverage_tracker.py
 
 branch_coverage_hiliteInit = {
@@ -8,7 +7,10 @@ branch_coverage_hiliteInit = {
 }
 
 branch_coverage_hiliteExtInit = {
-    "codehilite_initExtension_46": False,
+    "codehilite_initExt_43": False,
+    "codehilite_initExt_44": False,
+    "codehilite_initExt_45": False,
+    "codehilite_initExt_46": False
 }
 
 branch_coverage_HT = {
