@@ -264,7 +264,7 @@ The tests added cover the following scenarios:
 <img src="https://github.com/Dolyetyus/markdown/assets/67073431/d40bb79d-5aa0-4910-9840-a81a2ccd36f7" width="600"></p>
 
 **The new coverage results by running the existing tool using all test modifications made by the group:** </p>
-*We will run the tool again after all of us are done and we merge our tests*
+<img src="https://github.com/Dolyetyus/markdown/assets/67073431/b9dc9004-f926-4e5a-bd27-cf366c81beff" width="600"></p>
 
 ## Statement of individual contributions
 
