@@ -278,12 +278,12 @@ With the new coverage report, coverage increases can be seen in the following fi
 - Forked the upstream Python markdown repository
 - Added some tests for parse_hl_lines and codehilite functions
 - Initialized and added some parts for parse_hl_lines and codehilite functions to this README file
-- Did the documentation of readme excluding the parts of individual group members
+- Did the documentation of README excluding the parts of individual group members
 
 #### Mihnea-Andrei Bârsan
 - Added some tests for HiliteTreeprocessor.run and stashedHTML2text._html_sub functions
 - Added some parts for HiliteTreeprocessor.run and stashedHTML2text._html_sub functions to this README file
-- (With a bit of help from this group) Wrapped up this assignment for submission
+- (With a bit of help from Musab) Wrapped up this assignment for submission
 
 **Alexandru-Valentin Florea**
 - Added some tests for CodeHilite.__init__ and CodeHiliteExtension.__init__ functions 
