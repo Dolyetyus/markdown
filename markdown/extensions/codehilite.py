@@ -27,6 +27,7 @@ from ..util import parseBoolValue
 from typing import TYPE_CHECKING, Callable, Any
 from ..coverage_tracker import branch_coverage_hiliteExtInit, branch_coverage_hiliteInit
 from ..coverage_tracker import branch_coverage_HT, branch_coverage_parse_header
+from ..coverage_tracker import branch_coverage_cd, branch_coverage_hl
 
 if TYPE_CHECKING:  # pragma: no cover
     import xml.etree.ElementTree as etree
@@ -48,11 +49,14 @@ def parse_hl_lines(expr: str) -> list[int]:
     Returns a list of integers, the line numbers to emphasize.
     """
     if not expr:
+        branch_coverage_hl["parse_hl_lines_10"] = True
         return []
 
     try:
+        branch_coverage_hl["parse_hl_lines_11"] = True
         return list(map(int, expr.split()))
     except ValueError:  # pragma: no cover
+        branch_coverage_hl["parse_hl_lines_12"] = True
         return []
 
 
@@ -150,44 +154,60 @@ class CodeHilite:
         self.src = self.src.strip('\n')
 
         if self.lang is None and shebang:
+            branch_coverage_cd["hilite_13"] = True
             self._parseHeader()
 
         if pygments and self.use_pygments:
+            branch_coverage_cd["hilite_14"] = True
             try:
+                branch_coverage_cd["hilite_15"] = True
                 lexer = get_lexer_by_name(self.lang, **self.options)
             except ValueError:
+                branch_coverage_cd["hilite_16"] = True
                 try:
+                    branch_coverage_cd["hilite_17"] = True
                     if self.guess_lang:
+                        branch_coverage_cd["hilite_18"] = True
                         lexer = guess_lexer(self.src, **self.options)
                     else:
+                        branch_coverage_cd["hilite_19"] = True
                         lexer = get_lexer_by_name('text', **self.options)
                 except ValueError:  # pragma: no cover
                     lexer = get_lexer_by_name('text', **self.options)
             if not self.lang:
                 # Use the guessed lexer's language instead
+                branch_coverage_cd["hilite_21"] = True
                 self.lang = lexer.aliases[0]
             lang_str = f'{self.lang_prefix}{self.lang}'
             if isinstance(self.pygments_formatter, str):
+                branch_coverage_cd["hilite_22"] = True
                 try:
+                    branch_coverage_cd["hilite_23"] = True
                     formatter = get_formatter_by_name(self.pygments_formatter, **self.options)
                 except ClassNotFound:
+                    branch_coverage_cd["hilite_24"] = True
                     formatter = get_formatter_by_name('html', **self.options)
             else:
+                branch_coverage_cd["hilite_25"] = True
                 formatter = self.pygments_formatter(lang_str=lang_str, **self.options)
             return highlight(self.src, lexer, formatter)
         else:
             # just escape and build markup usable by JavaScript highlighting libraries
+            branch_coverage_cd["hilite_26"] = True
             txt = self.src.replace('&', '&amp;')
             txt = txt.replace('<', '&lt;')
             txt = txt.replace('>', '&gt;')
             txt = txt.replace('"', '&quot;')
             classes = []
             if self.lang:
+                branch_coverage_cd["hilite_27"] = True
                 classes.append('{}{}'.format(self.lang_prefix, self.lang))
             if self.options['linenos']:
+                branch_coverage_cd["hilite_28"] = True
                 classes.append('linenums')
             class_str = ''
             if classes:
+                branch_coverage_cd["hilite_29"] = True
                 class_str = ' class="{}"'.format(' '.join(classes))
             return '<pre class="{}"><code{}>{}\n</code></pre>\n'.format(
                 self.options['cssclass'],
