@@ -22,7 +22,7 @@ $ coverage run -m unittest discover
 ```
 
 Total function coverage was 95%:</p>
-<img src="https://github.com/Dolyetyus/markdown/assets/67073431/d40bb79d-5aa0-4910-9840-a81a2ccd36f7" width="600"></p>
+<img src="https://github.com/Dolyetyus/markdown/assets/67073431/d40bb79d-5aa0-4910-9840-a81a2ccd36f7" width="500"></p>
 
 ### Your own coverage tool
 
@@ -261,10 +261,10 @@ The tests added cover the following scenarios:
 ### Overall
 
 **The old coverage results by running the existing tool (coverage.py):** </p>
-<img src="https://github.com/Dolyetyus/markdown/assets/67073431/d40bb79d-5aa0-4910-9840-a81a2ccd36f7" width="600"></p>
+<img src="https://github.com/Dolyetyus/markdown/assets/67073431/d40bb79d-5aa0-4910-9840-a81a2ccd36f7" width="500"></p>
 
 **The new coverage results by running the existing tool using all test modifications made by the group:** </p>
-<img src="https://github.com/Dolyetyus/markdown/assets/67073431/b9dc9004-f926-4e5a-bd27-cf366c81beff" width="600"></p>
+<img src="https://github.com/Dolyetyus/markdown/assets/67073431/b9dc9004-f926-4e5a-bd27-cf366c81beff" width="500"></p>
 
 ## Statement of individual contributions
 
