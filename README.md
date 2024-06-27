@@ -268,4 +268,20 @@ The tests added cover the following scenarios:
 
 ## Statement of individual contributions
 
-*Write here what each group member did*
+#### Said Musab Oguz
+- forked the upstream Python markdown repository
+- added some tests for parse_hl_lines and codehilite functions
+- initialized and added some parts for parse_hl_lines and codehilite functions to this README file
+
+#### Mihnea-Andrei Bârsan
+- added some tests for HiliteTreeprocessor.run and stashedHTML2text._html_sub functions
+- added some parts for HiliteTreeprocessor.run and stashedHTML2text._html_sub functions to this README file
+- (with a bit of help from this group) wrapped up this assignment for submission
+
+**Alexandru-Valentin Florea**
+- added some tests for CodeHilite.__init__ and CodeHiliteExtension.__init__ functions 
+- added some parts for CodeHilite.__init__ and CodeHiliteExtension.__init__ functions to this README file
+
+**Robert Sofroni**
+- added some tests for dequote and _parseHeader functions
+- added some parts for dequote and _parseHeader functions to this README file
