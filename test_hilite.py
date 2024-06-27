@@ -5,12 +5,12 @@ from markdown.coverage_tracker import branch_coverage_cd
 from test_parse_hl_lines import print_coverage
 
 class TestCodeHilite(unittest.TestCase):        
-    #@unittest.skip(" ")
+    @unittest.skip(" ")
     def test_empty_coverage(self):
         print("-"*10 + "hilite Coverage" + "-"*10)
         print_coverage(branch_coverage_cd)
 
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test0_hilite_with_language(self, mock_highlight, mock_get_lexer):
@@ -31,7 +31,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-"*10 + "hilite Test 1" + "-"*10)
         print_coverage(branch_coverage_cd)
 
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.guess_lexer')
     @patch('markdown.extensions.codehilite.highlight')
@@ -55,7 +55,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 2" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test2_hilite_no_pygments_with_line_numbers(self, mock_highlight, mock_get_lexer):
@@ -73,7 +73,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 3" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test3_hilite_with_invalid_formatter(self, mock_highlight, mock_get_lexer):
@@ -91,7 +91,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 4" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test4_hilite_with_linenos(self, mock_highlight, mock_get_lexer):
@@ -108,7 +108,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 5" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     def test5_hilite_without_shebang(self):
         """Test hilite without shebang parsing."""
         code = CodeHilite('print("Hello, World!")', lang=None)
@@ -121,7 +121,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-"*10 + "hilite Test 6" + "-"*10)
         print_coverage(branch_coverage_cd)
 
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test6_hilite_with_custom_formatter(self, mock_highlight, mock_get_lexer):
@@ -142,7 +142,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 7" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test7_hilite_with_double_fallback(self, mock_highlight, mock_get_lexer):
@@ -160,7 +160,7 @@ class TestCodeHilite(unittest.TestCase):
         print("-" * 10 + "hilite Test 8" + "-" * 10)
         print_coverage(branch_coverage_cd)
 
-    @unittest.skip("Tests added are skipped to show")
+    #@unittest.skip("Tests added are skipped to show")
     @patch('markdown.extensions.codehilite.get_lexer_by_name')
     @patch('markdown.extensions.codehilite.highlight')
     def test8_hilite_no_pygments_with_classes(self, mock_highlight, mock_get_lexer):

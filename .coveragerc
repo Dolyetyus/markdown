@@ -3,3 +3,11 @@ omit=
     *site-packages*
     tests/*
     markdown/test_tools.py
+    test_HT_run.py
+    test_dequote.py
+    test_hilite.py
+    test_hiliteExtInit.py
+    test_hiliteInit.py
+    test_html_2_text.py
+    test_parse_header.py
+    test_parse_hl_lines.py
