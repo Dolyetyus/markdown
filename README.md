@@ -149,7 +149,7 @@ The new tests check the function in 9 cases:
 
 #### Test: HiliteTreeprocessor.run
 
-[Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/21436a094c8b1fbb607b7896d077def9aae80609)
+[Link to the patch (diff) for the new test file](https://github.com/Dolyetyus/markdown/commit/496baa31b266c101e9aab726b6a3fe827f6ae203)
 
 **Old coverage result:**</p>
 <img src="https://i.ibb.co/Mcc43GX/ss-init-cov.jpg" alt="screenshot-of-initial-coverage" width="600"></p>
