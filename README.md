@@ -266,6 +266,12 @@ The tests added cover the following scenarios:
 **The new coverage results by running the existing tool using all test modifications made by the group:** </p>
 <img src="https://github.com/Dolyetyus/markdown/assets/67073431/b9dc9004-f926-4e5a-bd27-cf366c81beff" width="500"></p>
 
+With the new coverage report, coverage increases can be seen in the following files:
+- __init__.py
+- codehilite.py
+- toc.py
+- util.py
+
 ## Statement of individual contributions
 
 #### Said Musab Oguz
