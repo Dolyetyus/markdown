@@ -275,19 +275,20 @@ With the new coverage report, coverage increases can be seen in the following fi
 ## Statement of individual contributions
 
 #### Said Musab Oguz
-- forked the upstream Python markdown repository
-- added some tests for parse_hl_lines and codehilite functions
-- initialized and added some parts for parse_hl_lines and codehilite functions to this README file
+- Forked the upstream Python markdown repository
+- Added some tests for parse_hl_lines and codehilite functions
+- Initialized and added some parts for parse_hl_lines and codehilite functions to this README file
+- Did the documentation of readme excluding the parts of individual group members
 
 #### Mihnea-Andrei Bârsan
-- added some tests for HiliteTreeprocessor.run and stashedHTML2text._html_sub functions
-- added some parts for HiliteTreeprocessor.run and stashedHTML2text._html_sub functions to this README file
-- (with a bit of help from this group) wrapped up this assignment for submission
+- Added some tests for HiliteTreeprocessor.run and stashedHTML2text._html_sub functions
+- Added some parts for HiliteTreeprocessor.run and stashedHTML2text._html_sub functions to this README file
+- (With a bit of help from this group) Wrapped up this assignment for submission
 
 **Alexandru-Valentin Florea**
-- added some tests for CodeHilite.__init__ and CodeHiliteExtension.__init__ functions 
-- added some parts for CodeHilite.__init__ and CodeHiliteExtension.__init__ functions to this README file
+- Added some tests for CodeHilite.__init__ and CodeHiliteExtension.__init__ functions 
+- Added some parts for CodeHilite.__init__ and CodeHiliteExtension.__init__ functions to this README file
 
 **Robert Sofroni**
-- added some tests for dequote and _parseHeader functions
-- added some parts for dequote and _parseHeader functions to this README file
+- Added some tests for dequote and _parseHeader functions
+- Added some parts for dequote and _parseHeader functions to this README file
