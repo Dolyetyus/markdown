@@ -120,7 +120,6 @@ class CodeHilite:
         self.use_pygments: bool = options.pop('use_pygments', True)
         self.lang_prefix: str = options.pop('lang_prefix', 'language-')
         self.pygments_formatter: str | Callable = options.pop('pygments_formatter', 'html')
-
         if 'linenos' not in options:
             options['linenos'] = options.pop('linenums', None)
         if 'cssclass' not in options:
