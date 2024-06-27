@@ -6,6 +6,19 @@ branch_coverage_hiliteInit = {
     "codehilite_init_42": False
 }
 
+branch_coverage_dequote = {
+    "dequote_30": False,
+    "dequote_31": False
+}
+
+branch_coverage_parse_header = {
+    "parse_header_32": False,
+    "parse_header_33": False,
+    "parse_header_34": False,
+    "parse_header_35": False,
+    "parse_header_36": False
+}
+
 branch_coverage_hiliteExtInit = {
     "codehilite_initExt_43": False,
     "codehilite_initExt_44": False,

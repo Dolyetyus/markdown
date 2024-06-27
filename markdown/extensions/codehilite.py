@@ -25,7 +25,8 @@ from . import Extension
 from ..treeprocessors import Treeprocessor
 from ..util import parseBoolValue
 from typing import TYPE_CHECKING, Callable, Any
-from ..coverage_tracker import branch_coverage_hiliteExtInit, branch_coverage_hiliteInit, branch_coverage_HT
+from ..coverage_tracker import branch_coverage_hiliteExtInit, branch_coverage_hiliteInit
+from ..coverage_tracker import branch_coverage_HT, branch_coverage_parse_header
 
 if TYPE_CHECKING:  # pragma: no cover
     import xml.etree.ElementTree as etree
@@ -206,11 +207,9 @@ class CodeHilite:
         shebang (e.i: `#!python`) is found, line numbering is turned on. When
         colons are found in place of a shebang (e.i.: `:::python`), line
         numbering is left in the current state - off by default.
-
         Also parses optional list of highlight lines, like:
-
             :::python hl_lines="1 3"
-        """
+            """
 
         import re
 
@@ -226,29 +225,36 @@ class CodeHilite:
             \s*                             # Arbitrary whitespace
             # Optional highlight lines, single- or double-quote-delimited
             (hl_lines=(?P<quot>"|')(?P<hl_lines>.*?)(?P=quot))?
-            ''',  re.VERBOSE)
+            ''', re.VERBOSE)
         # search first line for shebang
         m = c.search(fl)
         if m:
+            branch_coverage_parse_header["parse_header_32"] = True
             # we have a match
             try:
+
                 self.lang = m.group('lang').lower()
             except IndexError:  # pragma: no cover
                 self.lang = None
+
             if m.group('path'):
+                branch_coverage_parse_header["parse_header_33"] = True
                 # path exists - restore first line
                 lines.insert(0, fl)
+
             if self.options['linenos'] is None and m.group('shebang'):
+                branch_coverage_parse_header["parse_header_34"] = True
                 # Overridable and Shebang exists - use line numbers
                 self.options['linenos'] = True
 
+            branch_coverage_parse_header["parse_header_35"] = True
             self.options['hl_lines'] = parse_hl_lines(m.group('hl_lines'))
         else:
+            branch_coverage_parse_header["parse_header_36"] = True
             # No match
             lines.insert(0, fl)
 
         self.src = "\n".join(lines).strip("\n")
-
 
 # ------------------ The Markdown Extension -------------------------------
 
