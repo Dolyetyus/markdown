@@ -25,8 +25,10 @@ from . import Extension
 from ..treeprocessors import Treeprocessor
 from ..util import parseBoolValue
 from typing import TYPE_CHECKING, Callable, Any
+from ..coverage_tracker import branch_coverage_hiliteExtInit, branch_coverage_hiliteInit
+from ..coverage_tracker import branch_coverage_HT, branch_coverage_hl
+from ..coverage_tracker import branch_coverage_cd
 
-from ..coverage_tracker import branch_coverage_hl, branch_coverage_cd
 
 if TYPE_CHECKING:  # pragma: no cover
     import xml.etree.ElementTree as etree
@@ -124,13 +126,15 @@ class CodeHilite:
         self.use_pygments: bool = options.pop('use_pygments', True)
         self.lang_prefix: str = options.pop('lang_prefix', 'language-')
         self.pygments_formatter: str | Callable = options.pop('pygments_formatter', 'html')
-
         if 'linenos' not in options:
+            branch_coverage_hiliteInit["codehilite_init_40"] = True
             options['linenos'] = options.pop('linenums', None)
         if 'cssclass' not in options:
+            branch_coverage_hiliteInit["codehilite_init_41"] = True
             options['cssclass'] = options.pop('css_class', 'codehilite')
         if 'wrapcode' not in options:
             # Override Pygments default
+            branch_coverage_hiliteInit["codehilite_init_42"] = True
             options['wrapcode'] = True
         # Disallow use of `full` option
         options['full'] = False
@@ -289,10 +293,13 @@ class HiliteTreeprocessor(Treeprocessor):
         """ Find code blocks and store in `htmlStash`. """
         blocks = root.iter('pre')
         for block in blocks:
+            branch_coverage_HT["run_1"] = True
             if len(block) == 1 and block[0].tag == 'code':
+                branch_coverage_HT["run_2"] = True
                 local_config = self.config.copy()
                 text = block[0].text
                 if text is None:
+                    branch_coverage_HT["run_3"] = True
                     continue
                 code = CodeHilite(
                     self.code_unescape(text),
@@ -343,13 +350,17 @@ class CodeHiliteExtension(Extension):
         """ Default configuration options. """
 
         for key, value in kwargs.items():
+            branch_coverage_hiliteExtInit["codehilite_initExt_43"] = True
             if key in self.config:
+                branch_coverage_hiliteExtInit["codehilite_initExt_44"] = True
                 self.setConfig(key, value)
             else:
+                branch_coverage_hiliteExtInit["codehilite_initExt_45"] = True
                 # manually set unknown keywords.
                 if isinstance(value, str):
                     try:
                         # Attempt to parse `str` as a boolean value
+                        branch_coverage_hiliteExtInit["codehilite_initExt_46"] = True
                         value = parseBoolValue(value, preserve_none=True)
                     except ValueError:
                         pass  # Assume it's not a boolean value. Use as-is.
